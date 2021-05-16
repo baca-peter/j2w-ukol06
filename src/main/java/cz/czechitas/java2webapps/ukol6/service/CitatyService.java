@@ -19,8 +19,8 @@ public class CitatyService {
     }
 
     public String konkretniCitat(int cislo) {
-        if (cislo < this.citatyRepository.pocet()) {
-            return this.citatyRepository.citat(cislo);
+        if (cislo <= this.citatyRepository.pocet()) {
+            return this.citatyRepository.citat(cislo - 1);
         } else {
             return String.format("Citát s číslom %d neexistuje.", cislo);
         }
